@@ -28,6 +28,22 @@ function money(value) {
   return value === null || value === undefined ? '待核实' : `${value.toFixed(2)} 万元`;
 }
 
+function quoteFreshness(validUntil, now = new Date()) {
+  if (typeof validUntil !== 'string' || !validUntil) return '有效期待核实';
+  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(validUntil);
+  if (!match) return '有效期待核实';
+  const [, yearText, monthText, dayText] = match;
+  const [year, month, day] = [yearText, monthText, dayText].map(Number);
+  const expiresAt = new Date(year, month - 1, day, 23, 59, 59);
+  if (expiresAt.getFullYear() !== year || expiresAt.getMonth() !== month - 1 || expiresAt.getDate() !== day) return '有效期待核实';
+  return expiresAt < now ? '报价已过期' : `有效至 ${validUntil}`;
+}
+
+function confidenceLabel(confidence) {
+  const value = Number.isFinite(confidence) ? confidence : 0;
+  return value < 70 ? '资料不足，排名仅供参考' : `资料覆盖 ${value}%`;
+}
+
 function calculateEstimatedTotal(quote) {
   const fields = ['guidePriceWan', 'discountWan', 'insuranceWan', 'purchaseTaxWan', 'registrationWan', 'optionsWan'];
   if (fields.some((field) => quote[field] === null || quote[field] === undefined)) return null;
@@ -88,7 +104,7 @@ function renderOverview(profile, ranking) {
       <span class="tag ${escapeHtml(budgetStatus(item.totalWan, profile.budget).className)}">${escapeHtml(rankLabel)}</span>
       <h2>${escapeHtml(displayVehicleName(item.vehicle))}</h2>
       <p class="muted">${escapeHtml(present(variant.name))}</p>
-      <p class="score-meta">评分：<strong>${escapeHtml(score)}</strong> · 置信度：${escapeHtml(present(item.confidence, '%'))} · <span class="tag ${escapeHtml(budgetStatus(item.totalWan, profile.budget).className)}">${escapeHtml(budgetStatus(item.totalWan, profile.budget).label)}</span></p>
+      <p class="score-meta">评分：<strong>${escapeHtml(score)}</strong> · ${escapeHtml(confidenceLabel(item.confidence))} · <span class="tag ${escapeHtml(budgetStatus(item.totalWan, profile.budget).className)}">${escapeHtml(budgetStatus(item.totalWan, profile.budget).label)}</span></p>
       <ul class="compact-list"><li>优势：${escapeHtml(present(item.vehicle.strengths?.[0]))}</li><li>风险：${escapeHtml(present(item.vehicle.risks?.[0]))}</li></ul>
     </article>`;
   }).join('');
@@ -116,7 +132,7 @@ function renderCandidates(vehicles, quotes, profile) {
       <p class="price-meta">指导价：${escapeHtml(money(quote?.guidePriceWan ?? variant.guidePriceWan))}<br>预计落地价：${escapeHtml(money(totalWan))}</p>
       <p>${escapeHtml(present(vehicle.summary))}</p>
       <ul class="compact-list"><li>优势：${escapeHtml(present(vehicle.strengths?.[0]))}</li><li>风险：${escapeHtml(present(vehicle.risks?.[0]))}</li></ul>
-      <p class="source-meta">来源：<a href="${escapeHtml(source.url || '#')}" target="_blank" rel="noreferrer">${escapeHtml(present(source.title))}</a> · ${escapeHtml(present(source.checkedAt))}</p>
+      <p class="source-meta">来源：<a href="${escapeHtml(source.url || '#')}" target="_blank" rel="noreferrer">${escapeHtml(present(source.title))}（${escapeHtml(present(source.checkedAt))}）</a></p>
     </article>`;
   }).join('');
 }
@@ -206,7 +222,7 @@ function renderCosts(quotes, vehicles, profile) {
       const variant = vehicle?.variants?.find((item) => item.id === quote.variantId);
       const totalWan = calculateEstimatedTotal(quote);
       const status = budgetStatus(totalWan, profile.budget);
-      return `<tr><td>${escapeHtml(vehicle ? displayVehicleName(vehicle) : '待核实')}<br><span class="muted">${escapeHtml(present(variant?.name))}</span></td><td>${escapeHtml(money(quote.guidePriceWan))}</td><td>${escapeHtml(money(quote.discountWan))}</td><td>${escapeHtml(money(quote.insuranceWan))}</td><td>${escapeHtml(money(quote.purchaseTaxWan))}</td><td>${escapeHtml(money(quote.registrationWan))}</td><td>${escapeHtml(money(quote.optionsWan))}</td><td>${escapeHtml(money(totalWan))}</td><td><span class="tag ${escapeHtml(status.className)}">${escapeHtml(status.label)}</span></td><td>${escapeHtml(present(quote.source))}</td><td>${escapeHtml(present(quote.checkedAt))}</td><td>${escapeHtml(present(quote.validUntil))}</td></tr>`;
+      return `<tr><td>${escapeHtml(vehicle ? displayVehicleName(vehicle) : '待核实')}<br><span class="muted">${escapeHtml(present(variant?.name))}</span></td><td>${escapeHtml(money(quote.guidePriceWan))}</td><td>${escapeHtml(money(quote.discountWan))}</td><td>${escapeHtml(money(quote.insuranceWan))}</td><td>${escapeHtml(money(quote.purchaseTaxWan))}</td><td>${escapeHtml(money(quote.registrationWan))}</td><td>${escapeHtml(money(quote.optionsWan))}</td><td>${escapeHtml(money(totalWan))}</td><td><span class="tag ${escapeHtml(status.className)}">${escapeHtml(status.label)}</span></td><td>${escapeHtml(present(quote.source))}</td><td>${escapeHtml(present(quote.checkedAt))}</td><td>${escapeHtml(quoteFreshness(quote.validUntil))}</td></tr>`;
     }).join('')}</tbody>
   </table></div>`;
 }

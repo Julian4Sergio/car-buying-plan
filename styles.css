@@ -14,6 +14,7 @@
 html { scroll-behavior: smooth; }
 body { margin: 0; color: var(--text); background: var(--bg); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
 a { color: var(--accent); }
+:focus-visible { outline: 3px solid #8bb0ff; outline-offset: 3px; }
 .site-header { position: sticky; top: 0; z-index: 1; border-bottom: 1px solid var(--line); background: rgb(255 255 255 / 94%); backdrop-filter: blur(8px); }
 .header-inner { display: flex; align-items: center; gap: 2rem; max-width: 1180px; margin: auto; padding: .8rem 1.25rem; }
 .brand { flex: 0 0 auto; color: var(--text); font-weight: 700; text-decoration: none; }
@@ -61,4 +62,7 @@ th { background: #eef2f7; }
   section { scroll-margin-top: 7rem; }
   .grid { grid-template-columns: 1fr; }
   .progress-list li { flex-wrap: wrap; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
 }
