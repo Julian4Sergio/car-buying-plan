@@ -186,10 +186,80 @@ function renderComparison(vehicles, ranking) {
   };
   draw();
 }
-function renderCosts() {}
-function renderTestDrives() {}
-function renderFamilyNotes() {}
-function renderProgress() {}
+function renderCosts(quotes, vehicles, profile) {
+  const section = document.querySelector('#costs');
+  let content = section.querySelector('.costs-content');
+  if (!content) {
+    section.querySelectorAll(':scope > :not(#costs-title)').forEach((element) => element.remove());
+    content = document.createElement('div');
+    content.className = 'costs-content';
+    section.append(content);
+  }
+  if (!quotes.length) {
+    content.innerHTML = '<article class="card"><p class="muted">报价尚未录入。</p></article>';
+    return;
+  }
+  content.innerHTML = `<div class="scroll-table"><table class="costs-table">
+    <thead><tr><th scope="col">车型与具体版本</th><th scope="col">指导价</th><th scope="col">优惠</th><th scope="col">保险</th><th scope="col">购置税</th><th scope="col">上牌</th><th scope="col">选装</th><th scope="col">预计落地</th><th scope="col">预算状态</th><th scope="col">来源</th><th scope="col">查询日期</th><th scope="col">有效期</th></tr></thead>
+    <tbody>${quotes.map((quote) => {
+      const vehicle = vehicles.find((item) => item.id === quote.vehicleId);
+      const variant = vehicle?.variants?.find((item) => item.id === quote.variantId);
+      const totalWan = calculateEstimatedTotal(quote);
+      const status = budgetStatus(totalWan, profile.budget);
+      return `<tr><td>${escapeHtml(vehicle ? displayVehicleName(vehicle) : '待核实')}<br><span class="muted">${escapeHtml(present(variant?.name))}</span></td><td>${escapeHtml(money(quote.guidePriceWan))}</td><td>${escapeHtml(money(quote.discountWan))}</td><td>${escapeHtml(money(quote.insuranceWan))}</td><td>${escapeHtml(money(quote.purchaseTaxWan))}</td><td>${escapeHtml(money(quote.registrationWan))}</td><td>${escapeHtml(money(quote.optionsWan))}</td><td>${escapeHtml(money(totalWan))}</td><td><span class="tag ${escapeHtml(status.className)}">${escapeHtml(status.label)}</span></td><td>${escapeHtml(present(quote.source))}</td><td>${escapeHtml(present(quote.checkedAt))}</td><td>${escapeHtml(present(quote.validUntil))}</td></tr>`;
+    }).join('')}</tbody>
+  </table></div>`;
+}
+
+function renderTestDrives(records) {
+  const section = document.querySelector('#test-drives');
+  let content = section.querySelector('.test-drives-content');
+  if (!content) {
+    section.querySelectorAll(':scope > :not(#test-drives-title)').forEach((element) => element.remove());
+    content = document.createElement('div');
+    content.className = 'test-drives-content grid';
+    section.append(content);
+  }
+  content.innerHTML = !records.length
+    ? '<article class="card"><p>尚未试驾。试驾后记录座椅、底盘、隔音、晕车感、后排、储物和停车体验。</p></article>'
+    : records.map((record) => `<article class="card"><h3>${escapeHtml(present(record.vehicleName))}</h3><p class="muted">${escapeHtml(present(record.date))}</p><p>${escapeHtml(present(record.notes))}</p></article>`).join('');
+}
+
+function renderFamilyNotes(notes) {
+  const section = document.querySelector('#family');
+  let content = section.querySelector('.family-notes-content');
+  if (!content) {
+    section.querySelectorAll(':scope > :not(#family-title)').forEach((element) => element.remove());
+    content = document.createElement('div');
+    content.className = 'family-notes-content grid';
+    section.append(content);
+  }
+  content.innerHTML = !notes.length
+    ? '<article class="card"><p>家庭意见尚未录入；后续只记录昵称和购车意见。</p></article>'
+    : notes.map((note) => `<article class="card"><h3>${escapeHtml(present(note.nickname))}</h3><p class="muted">${escapeHtml(present(note.vehicleName))}</p><p>${escapeHtml(present(note.comment))}</p></article>`).join('');
+}
+
+function renderProgress(items) {
+  const section = document.querySelector('#progress');
+  let content = section.querySelector('.progress-content');
+  if (!content) {
+    section.querySelectorAll(':scope > :not(#progress-title)').forEach((element) => element.remove());
+    content = document.createElement('div');
+    content.className = 'progress-content';
+    section.append(content);
+  }
+  const statuses = {
+    done: ['已完成', 'tag--within'],
+    active: ['进行中', 'tag--stretch'],
+    pending: ['未开始', 'tag--reference'],
+  };
+  content.innerHTML = !items.length
+    ? '<article class="card"><p class="muted">购买进度待补充</p></article>'
+    : `<ol class="progress-list">${items.map((item) => {
+      const [label, className] = statuses[item.status] || ['状态待核实', 'tag--reference'];
+      return `<li class="card"><span>${escapeHtml(present(item.label))}</span><span class="tag ${className}">${escapeHtml(label)}</span></li>`;
+    }).join('')}</ol>`;
+}
 
 function renderApp(data) {
   const ranking = buildRanking(data.vehicles, data.quotes, data.profile);

@@ -45,15 +45,20 @@ h1, h2 { line-height: 1.25; }
 .compare-controls input:disabled { cursor: not-allowed; }
 .scroll-table { max-width: 100%; overflow-x: auto; }
 .comparison-table { min-width: 48rem; }
+.costs-table { min-width: 82rem; }
+.costs-table td { vertical-align: top; }
 .comparison-table th:first-child { position: sticky; left: 0; z-index: 1; }
 .comparison-table tbody th:first-child { background: var(--surface); }
 table { width: 100%; min-width: 36rem; border-collapse: collapse; background: var(--surface); }
 th, td { padding: .75rem; border: 1px solid var(--line); text-align: left; }
 th { background: #eef2f7; }
+.progress-list { display: grid; gap: .75rem; margin: 0; padding: 0; list-style: none; }
+.progress-list li { display: flex; align-items: center; justify-content: space-between; gap: .75rem; }
 .site-footer { max-width: 1180px; margin: auto; padding: 1rem 1.25rem 3rem; color: var(--muted); font-size: .875rem; }
 @media (max-width: 760px) {
   .header-inner { display: block; }
   nav { margin-top: .6rem; }
   section { scroll-margin-top: 7rem; }
   .grid { grid-template-columns: 1fr; }
+  .progress-list li { flex-wrap: wrap; }
 }
