@@ -73,14 +73,17 @@ function calculateScore(vehicle, weights) {
 
 function buildRanking(vehicles, quotes, profile) {
   return vehicles
-    .map((vehicle) => {
+    .map((vehicle, index) => {
       const quote = quotes.find((item) => item.vehicleId === vehicle.id && item.variantId === vehicle.recommendedVariantId) || null;
       const totalWan = quote ? calculateEstimatedTotal(quote) : null;
       const { score, confidence } = calculateScore(vehicle, profile.weights);
-      return { vehicle, quote, totalWan, score, confidence };
+      return { vehicle, quote, totalWan, score, confidence, eligible: score !== null && confidence >= 70, index };
     })
     .filter(({ totalWan }) => totalWan === null || totalWan <= profile.budget.ceilingWan)
-    .sort((left, right) => (right.score ?? -1) - (left.score ?? -1));
+    .sort((left, right) => {
+      if (left.eligible !== right.eligible) return Number(right.eligible) - Number(left.eligible);
+      return left.eligible ? right.score - left.score : left.index - right.index;
+    });
 }
 
 function recommendedVariant(vehicle) {
@@ -89,7 +92,7 @@ function recommendedVariant(vehicle) {
 
 function renderOverview(profile, ranking) {
   const overview = document.querySelector('#overview');
-  const allScoresMissing = ranking.every(({ score }) => score === null);
+  const hasEligible = ranking.some(({ eligible }) => eligible);
   const needs = [
     `${present(profile.city)}、${present(profile.powertrain)}${present(profile.bodyType)}`,
     `约${present(profile.familySize)}人、${present(profile.purchaseWindowMonths?.join('-'), '个月')}`,
@@ -98,7 +101,7 @@ function renderOverview(profile, ranking) {
   ];
   const recommendations = ranking.slice(0, 3).map((item, index) => {
     const variant = recommendedVariant(item.vehicle);
-    const rankLabel = item.score === null ? `重点候选 ${index + 1}` : `推荐 ${index + 1}`;
+    const rankLabel = item.eligible ? `推荐 ${index + 1}` : `重点候选 ${index + 1}`;
     const score = item.score === null ? '待评分' : item.score.toFixed(1);
     return `<article class="card overview-recommendation">
       <span class="tag ${escapeHtml(budgetStatus(item.totalWan, profile.budget).className)}">${escapeHtml(rankLabel)}</span>
@@ -112,7 +115,7 @@ function renderOverview(profile, ranking) {
     <article class="card"><h2>需求</h2><ul class="compact-list">${needs.map((need) => `<li>${escapeHtml(need)}</li>`).join('')}</ul></article>
     <article class="card"><h2>预算</h2><p>目标 ${escapeHtml(money(profile.budget?.targetWan))}</p><p class="muted">观察上限 ${escapeHtml(money(profile.budget?.ceilingWan))}</p></article>
     <article class="card"><h2>更新时间</h2><p>${escapeHtml(present(profile.lastReviewed))}</p><p class="muted">${escapeHtml(present(profile.scoreNote))}</p></article>
-    ${allScoresMissing ? '<p class="ranking-note muted">现阶段资料不足，顺序不代表最终推荐</p>' : ''}
+    ${hasEligible ? '' : '<p class="ranking-note muted">现阶段资料不足，顺序不代表最终推荐</p>'}
     ${recommendations}`;
 }
 
@@ -123,7 +126,12 @@ function renderCandidates(vehicles, quotes, profile) {
     const quote = quotes.find((item) => item.vehicleId === vehicle.id && item.variantId === vehicle.recommendedVariantId);
     const totalWan = quote ? calculateEstimatedTotal(quote) : null;
     const status = budgetStatus(totalWan, profile.budget);
-    const source = vehicle.sources?.[0] || {};
+    const sources = vehicle.sources || [];
+    const sourceItems = sources.map((source) => {
+      const title = escapeHtml(present(source.title));
+      const link = source.url ? `<a href="${escapeHtml(source.url)}" target="_blank" rel="noreferrer">${title}</a>` : `<span>${title}</span>`;
+      return `<li>${escapeHtml(present(source.type))}：${link} · ${escapeHtml(present(source.checkedAt))}</li>`;
+    }).join('') || '<li>待核实</li>';
     return `<article class="card vehicle-card">
       <img class="vehicle-image" src="${escapeHtml(vehicle.image || 'assets/car-placeholder.svg')}" alt="${escapeHtml(displayVehicleName(vehicle))}" onerror="this.onerror=null;this.src='assets/car-placeholder.svg'">
       <p><span class="tag tag--reference">${escapeHtml(present(vehicle.status))}</span> <span class="tag ${escapeHtml(status.className)}">${escapeHtml(status.label)}</span></p>
@@ -132,7 +140,7 @@ function renderCandidates(vehicles, quotes, profile) {
       <p class="price-meta">指导价：${escapeHtml(money(quote?.guidePriceWan ?? variant.guidePriceWan))}<br>预计落地价：${escapeHtml(money(totalWan))}</p>
       <p>${escapeHtml(present(vehicle.summary))}</p>
       <ul class="compact-list"><li>优势：${escapeHtml(present(vehicle.strengths?.[0]))}</li><li>风险：${escapeHtml(present(vehicle.risks?.[0]))}</li></ul>
-      <p class="source-meta">来源：<a href="${escapeHtml(source.url || '#')}" target="_blank" rel="noreferrer">${escapeHtml(present(source.title))}（${escapeHtml(present(source.checkedAt))}）</a></p>
+      <details class="source-list source-meta"><summary>来源（${sources.length}）</summary><ul>${sourceItems}</ul></details>
     </article>`;
   }).join('');
 }

@@ -36,6 +36,9 @@ h1, h2 { line-height: 1.25; }
 .overview-recommendation h2, .vehicle-card h3 { margin: .6rem 0 0; }
 .score-meta, .price-meta, .source-meta { font-size: .9rem; }
 .score-meta strong { font-size: 1.1rem; }
+.source-list { margin-top: 1rem; }
+.source-list summary { cursor: pointer; }
+.source-list ul { margin: .35rem 0 0; padding-left: 1.2rem; }
 .vehicle-card { overflow: hidden; }
 .vehicle-image { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: .5rem; }
 .table-wrap { overflow-x: auto; }
