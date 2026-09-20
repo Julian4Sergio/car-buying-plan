@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">车型图片占位图</title>
+  <desc id="desc">简化的汽车图形，车型图片待补充</desc>
+  <rect width="640" height="360" fill="#e8eef5"/>
+  <g fill="none" stroke="#52657a" stroke-width="10" stroke-linejoin="round">
+    <path d="M130 235h380l-32-78c-8-20-25-32-47-32H239c-19 0-36 10-46 28z" fill="#fff"/>
+    <path d="M222 136h151l26 60H192z" fill="#cbd8e6"/>
+    <path d="M130 235h380v30H130z" fill="#fff"/>
+    <circle cx="211" cy="267" r="28" fill="#52657a"/>
+    <circle cx="429" cy="267" r="28" fill="#52657a"/>
+  </g>
+  <text x="320" y="80" fill="#52657a" font-family="system-ui,sans-serif" font-size="24" text-anchor="middle">车型图片待补充</text>
+</svg>

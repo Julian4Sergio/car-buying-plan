@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="家庭购车计划与候选车型信息">
+    <title>家庭购车计划</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="#overview">家庭购车计划</a>
+        <nav aria-label="页面导航">
+          <a href="#overview">概览</a>
+          <a href="#candidates">候选车型</a>
+          <a href="#comparison">参数对比</a>
+          <a href="#costs">价格与成本</a>
+          <a href="#test-drives">试驾记录</a>
+          <a href="#family">家庭结论</a>
+          <a href="#progress">购买进度</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <p id="app-status" class="card" role="status" aria-live="polite">正在加载购车计划…</p>
+
+      <section id="overview" aria-labelledby="overview-title">
+        <h1 id="overview-title">购车计划概览</h1>
+        <div class="grid">
+          <article class="card"><h2>目标</h2><p class="muted">等待计划资料加载。</p></article>
+          <article class="card"><h2>预算</h2><p class="muted">等待计划资料加载。</p></article>
+          <article class="card"><h2>更新时间</h2><p class="muted">由数据文件提供。</p></article>
+        </div>
+      </section>
+
+      <section id="candidates" aria-labelledby="candidates-title">
+        <h2 id="candidates-title">候选车型</h2>
+        <div class="grid"><article class="card"><p class="muted">候选车型资料待加载。</p></article></div>
+      </section>
+
+      <section id="comparison" aria-labelledby="comparison-title">
+        <h2 id="comparison-title">参数对比</h2>
+        <div class="table-wrap"><table><caption class="muted">候选车型核心参数</caption><thead><tr><th scope="col">车型</th><th scope="col">价格</th><th scope="col">空间</th></tr></thead><tbody><tr><td colspan="3" class="muted">数据待加载。</td></tr></tbody></table></div>
+      </section>
+
+      <section id="costs" aria-labelledby="costs-title">
+        <h2 id="costs-title">价格与成本</h2>
+        <div class="grid"><article class="card"><p class="muted">价格与用车成本资料待加载。</p></article></div>
+      </section>
+
+      <section id="test-drives" aria-labelledby="test-drives-title">
+        <h2 id="test-drives-title">试驾记录</h2>
+        <div class="grid"><article class="card"><p class="muted">试驾记录待加载。</p></article></div>
+      </section>
+
+      <section id="family" aria-labelledby="family-title">
+        <h2 id="family-title">家庭结论</h2>
+        <article class="card"><p class="muted">家庭讨论结论待加载。</p></article>
+      </section>
+
+      <section id="progress" aria-labelledby="progress-title">
+        <h2 id="progress-title">购买进度</h2>
+        <article class="card"><p class="muted">购买进度待加载。</p></article>
+      </section>
+    </main>
+
+    <footer class="site-footer"><p>本网站公开只读，请勿放置身份证号、联系方式或其他敏感资料。</p></footer>
+  </body>
+</html>
