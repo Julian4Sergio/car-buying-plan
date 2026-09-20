@@ -29,6 +29,6 @@ python3 -m http.server 8000
 
 ## 发布到 GitHub Pages
 
-在 GitHub 仓库中依次打开：**Settings -> Pages -> Deploy from a branch -> main -> /(root)**，保存后等待 Pages 完成部署。
+先将站点实现分支合并到并推送至 GitHub 的 `main`，确认 `main` 根目录包含 `index.html`；再在 GitHub 仓库中依次打开：**Settings -> Pages -> Deploy from a branch -> main -> /(root)**，保存后等待 Pages 完成部署。
 
 本项目目前没有后端，也没有构建步骤；静态文件可直接发布。
