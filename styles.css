@@ -37,5 +37,6 @@ th { background: #eef2f7; }
 @media (max-width: 760px) {
   .header-inner { display: block; }
   nav { margin-top: .6rem; }
+  section { scroll-margin-top: 7rem; }
   .grid { grid-template-columns: 1fr; }
 }
