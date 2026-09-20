@@ -256,7 +256,7 @@ function renderProgress(items) {
   content.innerHTML = !items.length
     ? '<article class="card"><p class="muted">购买进度待补充</p></article>'
     : `<ol class="progress-list">${items.map((item) => {
-      const [label, className] = statuses[item.status] || ['状态待核实', 'tag--reference'];
+      const [label, className] = Object.hasOwn(statuses, item.status) ? statuses[item.status] : ['状态待核实', 'tag--reference'];
       return `<li class="card"><span>${escapeHtml(present(item.label))}</span><span class="tag ${className}">${escapeHtml(label)}</span></li>`;
     }).join('')}</ol>`;
 }
