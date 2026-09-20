@@ -1,0 +1,26 @@
+[
+  {
+    "label": "确认需求与预算",
+    "status": "done"
+  },
+  {
+    "label": "完成首轮车型调研",
+    "status": "active"
+  },
+  {
+    "label": "预约试驾",
+    "status": "pending"
+  },
+  {
+    "label": "收集广州门店报价",
+    "status": "pending"
+  },
+  {
+    "label": "确认版本与权益",
+    "status": "pending"
+  },
+  {
+    "label": "签约与提车检查",
+    "status": "pending"
+  }
+]

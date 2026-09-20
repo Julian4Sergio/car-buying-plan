@@ -1,0 +1,31 @@
+{
+  "city": "广州",
+  "purchaseWindowMonths": [
+    2,
+    4
+  ],
+  "familySize": 4,
+  "weeklyKm": 30,
+  "primaryUse": "假期家庭出行为主",
+  "powertrain": "纯电",
+  "bodyType": "SUV",
+  "homeChargingAfterMonths": 18,
+  "chargingBeforeHome": "公共充电",
+  "budget": {
+    "targetWan": 18,
+    "ceilingWan": 20
+  },
+  "weights": {
+    "battery": 15,
+    "afterSales": 15,
+    "comfort": 15,
+    "space": 15,
+    "safety": 10,
+    "charging": 10,
+    "price": 10,
+    "driving": 5,
+    "smart": 5
+  },
+  "lastReviewed": "2026-09-20",
+  "scoreNote": "评分为本家庭资料初评，非官方评级；证据不足留空。尺寸/配置初评不能代替试驾，偏好只影响综合分。"
+}

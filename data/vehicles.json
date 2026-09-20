@@ -1,0 +1,790 @@
+[
+  {
+    "id": "arcfox-alpha-t7",
+    "brand": "极狐",
+    "name": "极狐 阿尔法 T7",
+    "status": "已上市",
+    "recommendedVariantId": "t7-715-ultra",
+    "image": "assets/car-placeholder.svg",
+    "summary": "优先看长续航舒适版本；车身最大，先确认广州车位及窄路适应性。",
+    "strengths": [
+      "官网：715km CLTC、84.8kWh及800V平台",
+      "官网：645L后备箱与200L前备箱"
+    ],
+    "risks": [
+      "刚上市，长期质量和真实续航证据有限",
+      "接近2米车宽，机械车位与家人上下车须实测",
+      "上市补贴有条件，报价仅按指导价"
+    ],
+    "specs": {
+      "lengthMm": 5020,
+      "widthMm": 1996,
+      "heightMm": 1685,
+      "wheelbaseMm": 3040,
+      "trunkLiters": 645,
+      "batterySupplier": "宁德时代（官网全系标配，交付铭牌复核）"
+    },
+    "variants": [
+      {
+        "id": "t7-715-ultra",
+        "name": "纯电 715 ULTRA",
+        "guidePriceWan": 16.38,
+        "cltcKm": 715,
+        "batteryKwh": 84.8,
+        "chargingPlatform": "800V"
+      },
+      {
+        "id": "t7-715-max",
+        "name": "纯电 715 MAX",
+        "guidePriceWan": 15.38,
+        "cltcKm": 715,
+        "batteryKwh": 84.8,
+        "chargingPlatform": "800V"
+      },
+      {
+        "id": "t7-715-ultra-ads",
+        "name": "纯电 715 ULTRA乾崑版",
+        "guidePriceWan": 17.28,
+        "cltcKm": 715,
+        "batteryKwh": 84.8,
+        "chargingPlatform": "800V"
+      }
+    ],
+    "scores": {
+      "battery": {
+        "value": null,
+        "evidence": "电池安全实绩及推荐版本质保除外责任未齐；宣传测试不能代替实际风险评价。"
+      },
+      "afterSales": {
+        "value": null,
+        "evidence": "广州就近授权售后网点、三电维修能力与预约时效待核实，暂不按品牌规模评分。"
+      },
+      "comfort": {
+        "value": null,
+        "evidence": "未完成家庭四人同乘试驾；座椅、隔音、空调和后排晕车感待验证。"
+      },
+      "space": {
+        "value": 9,
+        "evidence": "尺寸初评9分：官网轴距3040mm、后备箱645L，纸面较充足；儿童座椅与行李实装待验证，非实测评分。"
+      },
+      "safety": {
+        "value": null,
+        "evidence": "推荐版本安全配置及同年款独立安全结果待完整核验；辅助驾驶不等于自动驾驶。"
+      },
+      "charging": {
+        "value": null,
+        "evidence": "CLTC不是实际高速续航；广州公共桩兼容性、充电曲线与假期排队待验证。"
+      },
+      "price": {
+        "value": null,
+        "evidence": "没有广州有效落地报价；保险、税费和上牌未知，不用指导价代替落地评分。"
+      },
+      "driving": {
+        "value": null,
+        "evidence": "未完成广州道路及车位试驾，转向、制动、滤震与停车便利性待验证。"
+      },
+      "smart": {
+        "value": null,
+        "evidence": "推荐版本软件功能开通状态及座舱、辅助驾驶实际表现待验证。"
+      }
+    },
+    "sources": [
+      {
+        "type": "官方",
+        "title": "极狐阿尔法T7车型、上市指导价及权益",
+        "url": "https://www.arcfox.com.cn/T7/index.html",
+        "checkedAt": "2026-09-20"
+      }
+    ]
+  },
+  {
+    "id": "changan-nevo-q06",
+    "brand": "长安启源",
+    "name": "长安启源 Q06",
+    "status": "预售",
+    "recommendedVariantId": "q06-700-pro",
+    "image": "assets/car-placeholder.svg",
+    "summary": "700km纯电Pro版作为预算观察项；正式上市价、版本和交期未锁定。",
+    "strengths": [
+      "官网：700km CLTC、80.02kWh与800V",
+      "官网宣传30%–80%充电9分钟，受桩与温度条件影响"
+    ],
+    "risks": [
+      "仍在预售，最终价格和权益可能变化",
+      "预售价由汽车之家补充核验，上市后再查正式配置",
+      "宽1970mm，停车和四人舒适需实测"
+    ],
+    "specs": {
+      "lengthMm": 4837,
+      "widthMm": 1970,
+      "heightMm": 1670,
+      "wheelbaseMm": 2940,
+      "trunkLiters": null,
+      "batterySupplier": "宁德时代（700km版本官网说明）"
+    },
+    "variants": [
+      {
+        "id": "q06-700-pro",
+        "name": "纯电 700 智享型天枢领航Pro版",
+        "guidePriceWan": 16.99,
+        "cltcKm": 700,
+        "batteryKwh": 80.02,
+        "chargingPlatform": "800V"
+      },
+      {
+        "id": "q06-700-premium-pro",
+        "name": "纯电 700 智尊型天枢领航Pro版",
+        "guidePriceWan": 17.99,
+        "cltcKm": 700,
+        "batteryKwh": 80.02,
+        "chargingPlatform": "800V"
+      }
+    ],
+    "scores": {
+      "battery": {
+        "value": null,
+        "evidence": "电池安全实绩及推荐版本质保除外责任未齐；宣传测试不能代替实际风险评价。"
+      },
+      "afterSales": {
+        "value": null,
+        "evidence": "广州就近授权售后网点、三电维修能力与预约时效待核实，暂不按品牌规模评分。"
+      },
+      "comfort": {
+        "value": null,
+        "evidence": "未完成家庭四人同乘试驾；座椅、隔音、空调和后排晕车感待验证。"
+      },
+      "space": {
+        "value": null,
+        "evidence": "尺寸仅供初筛，儿童座椅、四人乘坐与假期行李实装待验证。"
+      },
+      "safety": {
+        "value": null,
+        "evidence": "推荐版本安全配置及同年款独立安全结果待完整核验；辅助驾驶不等于自动驾驶。"
+      },
+      "charging": {
+        "value": null,
+        "evidence": "CLTC不是实际高速续航；广州公共桩兼容性、充电曲线与假期排队待验证。"
+      },
+      "price": {
+        "value": null,
+        "evidence": "没有广州有效落地报价；保险、税费和上牌未知，不用指导价代替落地评分。"
+      },
+      "driving": {
+        "value": null,
+        "evidence": "未完成广州道路及车位试驾，转向、制动、滤震与停车便利性待验证。"
+      },
+      "smart": {
+        "value": null,
+        "evidence": "推荐版本软件功能开通状态及座舱、辅助驾驶实际表现待验证。"
+      }
+    },
+    "sources": [
+      {
+        "type": "官方",
+        "title": "长安启源Q06车型页（动态页面）",
+        "url": "https://www.changan.com.cn/qiyuan/#/Q06",
+        "checkedAt": "2026-09-20"
+      },
+      {
+        "type": "官方",
+        "title": "Q06官网页面资源：尺寸、电池和补能说明",
+        "url": "https://www.changan.com.cn/qiyuan/js/index-09bec493.js",
+        "checkedAt": "2026-09-20"
+      },
+      {
+        "type": "媒体",
+        "title": "汽车之家：Q06纯电版本及预售价",
+        "url": "https://car.autohome.com.cn/diandongche/series-8589.html",
+        "checkedAt": "2026-09-20"
+      }
+    ]
+  },
+  {
+    "id": "aion-v",
+    "brand": "广汽埃安",
+    "name": "广汽埃安 AION V",
+    "status": "已上市",
+    "recommendedVariantId": "aion-v-650-max-7526",
+    "image": "assets/car-placeholder.svg",
+    "summary": "家庭版长续航留有预算余量；国内家庭版、旧款与海外版参数须区分。",
+    "strengths": [
+      "官方确认家庭版上市，区间10.98–13.58万元",
+      "650km版本、电量和尺寸由太平洋配置表补充"
+    ],
+    "risks": [
+      "同版本存在不同电池批次，下订需写清具体规格",
+      "电池供应商及终身质保适用条款待书面确认",
+      "广州企业所在地不能证明就近门店服务质量"
+    ],
+    "specs": {
+      "lengthMm": 4580,
+      "widthMm": 1854,
+      "heightMm": 1686,
+      "wheelbaseMm": 2775,
+      "trunkLiters": 427,
+      "batterySupplier": null
+    },
+    "variants": [
+      {
+        "id": "aion-v-650-max-7526",
+        "name": "2026款 霸王龙家庭版 650 智尊版 75.26kWh",
+        "guidePriceWan": 13.58,
+        "cltcKm": 650,
+        "batteryKwh": 75.26,
+        "chargingPlatform": null
+      },
+      {
+        "id": "aion-v-650-pro-7526",
+        "name": "2026款 霸王龙家庭版 650 智豪版 75.26kWh",
+        "guidePriceWan": 12.88,
+        "cltcKm": 650,
+        "batteryKwh": 75.26,
+        "chargingPlatform": null
+      }
+    ],
+    "scores": {
+      "battery": {
+        "value": null,
+        "evidence": "电池安全实绩及推荐版本质保除外责任未齐；宣传测试不能代替实际风险评价。"
+      },
+      "afterSales": {
+        "value": null,
+        "evidence": "广州就近授权售后网点、三电维修能力与预约时效待核实，暂不按品牌规模评分。"
+      },
+      "comfort": {
+        "value": null,
+        "evidence": "未完成家庭四人同乘试驾；座椅、隔音、空调和后排晕车感待验证。"
+      },
+      "space": {
+        "value": null,
+        "evidence": "尺寸仅供初筛，儿童座椅、四人乘坐与假期行李实装待验证。"
+      },
+      "safety": {
+        "value": null,
+        "evidence": "推荐版本安全配置及同年款独立安全结果待完整核验；辅助驾驶不等于自动驾驶。"
+      },
+      "charging": {
+        "value": null,
+        "evidence": "CLTC不是实际高速续航；广州公共桩兼容性、充电曲线与假期排队待验证。"
+      },
+      "price": {
+        "value": null,
+        "evidence": "没有广州有效落地报价；保险、税费和上牌未知，不用指导价代替落地评分。"
+      },
+      "driving": {
+        "value": null,
+        "evidence": "未完成广州道路及车位试驾，转向、制动、滤震与停车便利性待验证。"
+      },
+      "smart": {
+        "value": null,
+        "evidence": "推荐版本软件功能开通状态及座舱、辅助驾驶实际表现待验证。"
+      }
+    },
+    "sources": [
+      {
+        "type": "官方",
+        "title": "广汽埃安：家庭版上市记录",
+        "url": "https://www.aion.com.cn/show/about_us",
+        "checkedAt": "2026-09-20"
+      },
+      {
+        "type": "媒体",
+        "title": "太平洋汽车：2026款霸王龙家庭版配置表",
+        "url": "https://price.pcauto.com.cn/m136269/config.html",
+        "checkedAt": "2026-09-20"
+      }
+    ]
+  },
+  {
+    "id": "byd-sealion-06-ev",
+    "brand": "比亚迪",
+    "name": "比亚迪 海狮 06 EV",
+    "status": "已上市",
+    "recommendedVariantId": "sealion06-710-long",
+    "image": "assets/car-placeholder.svg",
+    "summary": "同价优先710远航版的续航余量；605旗舰版可作为舒适配置对照。",
+    "strengths": [
+      "官网：757L后备箱及142L前备箱",
+      "官网：第二代刀片电池和闪充技术"
+    ],
+    "risks": [
+      "16.89万元指导价不等于18万元内落地",
+      "官网展示包含高配或选装功能，不能全部套用于推荐版",
+      "实际补能依赖配套桩、温度和车辆状态"
+    ],
+    "specs": {
+      "lengthMm": 4810,
+      "widthMm": 1920,
+      "heightMm": 1675,
+      "wheelbaseMm": 2820,
+      "trunkLiters": 757,
+      "batterySupplier": "第二代刀片电池（官网技术名称，生产主体待铭牌核对）"
+    },
+    "variants": [
+      {
+        "id": "sealion06-710-long",
+        "name": "2026款 710远航版",
+        "guidePriceWan": 16.89,
+        "cltcKm": 710,
+        "batteryKwh": null,
+        "chargingPlatform": "800V（媒体配置表；订单复核）"
+      },
+      {
+        "id": "sealion06-605-flagship",
+        "name": "2026款 605旗舰版",
+        "guidePriceWan": 16.89,
+        "cltcKm": 605,
+        "batteryKwh": null,
+        "chargingPlatform": "800V（媒体配置表；订单复核）"
+      },
+      {
+        "id": "sealion06-710-flagship",
+        "name": "2026款 710远航旗舰版",
+        "guidePriceWan": 17.99,
+        "cltcKm": 710,
+        "batteryKwh": null,
+        "chargingPlatform": "800V（媒体配置表；订单复核）"
+      }
+    ],
+    "scores": {
+      "battery": {
+        "value": null,
+        "evidence": "电池安全实绩及推荐版本质保除外责任未齐；宣传测试不能代替实际风险评价。"
+      },
+      "afterSales": {
+        "value": null,
+        "evidence": "广州就近授权售后网点、三电维修能力与预约时效待核实，暂不按品牌规模评分。"
+      },
+      "comfort": {
+        "value": null,
+        "evidence": "未完成家庭四人同乘试驾；座椅、隔音、空调和后排晕车感待验证。"
+      },
+      "space": {
+        "value": 8.5,
+        "evidence": "尺寸初评8.5分：官网后备箱757L、轴距2820mm；不同品牌容积口径不同，家庭实装待验证，非实测评分。"
+      },
+      "safety": {
+        "value": null,
+        "evidence": "推荐版本安全配置及同年款独立安全结果待完整核验；辅助驾驶不等于自动驾驶。"
+      },
+      "charging": {
+        "value": null,
+        "evidence": "CLTC不是实际高速续航；广州公共桩兼容性、充电曲线与假期排队待验证。"
+      },
+      "price": {
+        "value": null,
+        "evidence": "没有广州有效落地报价；保险、税费和上牌未知，不用指导价代替落地评分。"
+      },
+      "driving": {
+        "value": null,
+        "evidence": "未完成广州道路及车位试驾，转向、制动、滤震与停车便利性待验证。"
+      },
+      "smart": {
+        "value": null,
+        "evidence": "推荐版本软件功能开通状态及座舱、辅助驾驶实际表现待验证。"
+      }
+    },
+    "sources": [
+      {
+        "type": "官方",
+        "title": "2026款海狮06EV车型及技术说明",
+        "url": "https://www.byd.com/cn/ocean-home/models/haishi/26-haishi-06-ev",
+        "checkedAt": "2026-09-20"
+      },
+      {
+        "type": "媒体",
+        "title": "汽车之家：2026款海狮06EV上市价格",
+        "url": "https://www.autohome.com.cn/news/202603/1312729.html",
+        "checkedAt": "2026-09-20"
+      },
+      {
+        "type": "媒体",
+        "title": "懂车帝：海狮06EV分版本参数",
+        "url": "https://www.dongchedi.com/auto/params-carIds-x-25400",
+        "checkedAt": "2026-09-20"
+      }
+    ]
+  },
+  {
+    "id": "xpeng-g6-bev",
+    "brand": "小鹏",
+    "name": "小鹏 G6 纯电版",
+    "status": "已上市",
+    "recommendedVariantId": "g6-625-max-tech",
+    "image": "assets/car-placeholder.svg",
+    "summary": "科技版更接近预算，但指导价已接近18万元，需取得落地报价再筛选。",
+    "strengths": [
+      "官方配置表：625km CLTC、800V和5C",
+      "纯电版后备箱647L，已排除增程版参数"
+    ],
+    "risks": [
+      "税费和保险可能使落地超出目标",
+      "选20英寸轮毂后官方CLTC降为600km",
+      "Ultra升级包另收费；电量及供应商待官方书面补充"
+    ],
+    "specs": {
+      "lengthMm": 4758,
+      "widthMm": 1920,
+      "heightMm": 1650,
+      "wheelbaseMm": 2890,
+      "trunkLiters": 647,
+      "batterySupplier": null
+    },
+    "variants": [
+      {
+        "id": "g6-625-max-tech",
+        "name": "2026款 625 Max 科技版",
+        "guidePriceWan": 17.68,
+        "cltcKm": 625,
+        "batteryKwh": null,
+        "chargingPlatform": "800V / 5C"
+      },
+      {
+        "id": "g6-625-max-flagship",
+        "name": "2026款 625 Max 旗舰版",
+        "guidePriceWan": 18.68,
+        "cltcKm": 625,
+        "batteryKwh": null,
+        "chargingPlatform": "800V / 5C"
+      }
+    ],
+    "scores": {
+      "battery": {
+        "value": null,
+        "evidence": "电池安全实绩及推荐版本质保除外责任未齐；宣传测试不能代替实际风险评价。"
+      },
+      "afterSales": {
+        "value": null,
+        "evidence": "广州就近授权售后网点、三电维修能力与预约时效待核实，暂不按品牌规模评分。"
+      },
+      "comfort": {
+        "value": null,
+        "evidence": "未完成家庭四人同乘试驾；座椅、隔音、空调和后排晕车感待验证。"
+      },
+      "space": {
+        "value": 8,
+        "evidence": "尺寸初评8分：官方纯电版轴距2890mm、后备箱647L；溜背对行李装载的影响待实车验证，非实测评分。"
+      },
+      "safety": {
+        "value": null,
+        "evidence": "推荐版本安全配置及同年款独立安全结果待完整核验；辅助驾驶不等于自动驾驶。"
+      },
+      "charging": {
+        "value": null,
+        "evidence": "CLTC不是实际高速续航；广州公共桩兼容性、充电曲线与假期排队待验证。"
+      },
+      "price": {
+        "value": null,
+        "evidence": "没有广州有效落地报价；保险、税费和上牌未知，不用指导价代替落地评分。"
+      },
+      "driving": {
+        "value": null,
+        "evidence": "未完成广州道路及车位试驾，转向、制动、滤震与停车便利性待验证。"
+      },
+      "smart": {
+        "value": null,
+        "evidence": "推荐版本软件功能开通状态及座舱、辅助驾驶实际表现待验证。"
+      }
+    },
+    "sources": [
+      {
+        "type": "官方",
+        "title": "2026款小鹏G6参数配置表",
+        "url": "https://www.xiaopeng.com/g6_2026/configuration.html",
+        "checkedAt": "2026-09-20"
+      }
+    ]
+  },
+  {
+    "id": "geely-galaxy-e5",
+    "brand": "吉利银河",
+    "name": "吉利银河 E5",
+    "status": "已上市",
+    "recommendedVariantId": "e5-610-starship",
+    "image": "assets/car-placeholder.svg",
+    "summary": "星舰版舒适配置较完整且留有预算余量；官网限时指导价需下单前复核。",
+    "strengths": [
+      "官网：610km CLTC与68.39kWh",
+      "星舰版列前排按摩、副驾腿托和自动泊车，探索+版可省1万元"
+    ],
+    "risks": [
+      "限时指导价有效期未明确，不代表门店锁价",
+      "高速续航、家庭舒适及广州公共桩待实测",
+      "电池供应商与质保除外责任待书面核验"
+    ],
+    "specs": {
+      "lengthMm": 4615,
+      "widthMm": 1901,
+      "heightMm": 1670,
+      "wheelbaseMm": 2750,
+      "trunkLiters": 461,
+      "batterySupplier": "新一代刀片式磷酸铁锂电池（具体供应商待核实）"
+    },
+    "variants": [
+      {
+        "id": "e5-610-starship",
+        "name": "2026款 610km 星舰版",
+        "guidePriceWan": 14.58,
+        "cltcKm": 610,
+        "batteryKwh": 68.39,
+        "chargingPlatform": "电压待核验；官方30%–80%快充20分钟"
+      },
+      {
+        "id": "e5-610-explore-plus",
+        "name": "2026款 610km 探索+版",
+        "guidePriceWan": 13.58,
+        "cltcKm": 610,
+        "batteryKwh": 68.39,
+        "chargingPlatform": "电压待核验；官方30%–80%快充20分钟"
+      }
+    ],
+    "scores": {
+      "battery": {
+        "value": null,
+        "evidence": "电池安全实绩及推荐版本质保除外责任未齐；宣传测试不能代替实际风险评价。"
+      },
+      "afterSales": {
+        "value": null,
+        "evidence": "广州就近授权售后网点、三电维修能力与预约时效待核实，暂不按品牌规模评分。"
+      },
+      "comfort": {
+        "value": null,
+        "evidence": "未完成家庭四人同乘试驾；座椅、隔音、空调和后排晕车感待验证。"
+      },
+      "space": {
+        "value": 7,
+        "evidence": "尺寸初评7分：官网轴距2750mm、后备箱461L，可作基本家用初筛；四人假期行李实装待验证。"
+      },
+      "safety": {
+        "value": null,
+        "evidence": "推荐版本安全配置及同年款独立安全结果待完整核验；辅助驾驶不等于自动驾驶。"
+      },
+      "charging": {
+        "value": null,
+        "evidence": "CLTC不是实际高速续航；广州公共桩兼容性、充电曲线与假期排队待验证。"
+      },
+      "price": {
+        "value": null,
+        "evidence": "没有广州有效落地报价；保险、税费和上牌未知，不用指导价代替落地评分。"
+      },
+      "driving": {
+        "value": null,
+        "evidence": "未完成广州道路及车位试驾，转向、制动、滤震与停车便利性待验证。"
+      },
+      "smart": {
+        "value": 7,
+        "evidence": "配置初评7分：官网星舰版列自动泊车、L2驾驶辅助与AEB；仅评价已列功能，实际易用性和接管表现未验证。"
+      }
+    },
+    "sources": [
+      {
+        "type": "官方",
+        "title": "2026款吉利银河E5价格与配置表",
+        "url": "https://galaxy.geely.com/E5",
+        "checkedAt": "2026-09-20"
+      }
+    ]
+  },
+  {
+    "id": "leapmotor-c10-bev",
+    "brand": "零跑",
+    "name": "零跑 C10 纯电版",
+    "status": "已上市",
+    "recommendedVariantId": "c10-660-lidar",
+    "image": "assets/car-placeholder.svg",
+    "summary": "全新660km纯电版留有预算余量；询价时务必与旧款605km库存车区分。",
+    "strengths": [
+      "官方现款页面：纯电800V、30%–80%补能16分钟",
+      "汽车之家确认2026年6月中改纯电660km及两款价格"
+    ],
+    "risks": [
+      "动态配置未完整抓取，电量、供应商与选装项待书面表",
+      "终身质保宣传不能代替本人订单适用条款",
+      "新旧款名称相似，核对生产日期、车长和版本"
+    ],
+    "specs": {
+      "lengthMm": 4749,
+      "widthMm": 1900,
+      "heightMm": 1680,
+      "wheelbaseMm": 2825,
+      "trunkLiters": null,
+      "batterySupplier": null
+    },
+    "variants": [
+      {
+        "id": "c10-660-lidar",
+        "name": "全新C10 纯电 660激光雷达版（2026年6月上市）",
+        "guidePriceWan": 14.28,
+        "cltcKm": 660,
+        "batteryKwh": null,
+        "chargingPlatform": "800V"
+      },
+      {
+        "id": "c10-660-smart",
+        "name": "全新C10 纯电 660智享版（2026年6月上市）",
+        "guidePriceWan": 13.28,
+        "cltcKm": 660,
+        "batteryKwh": null,
+        "chargingPlatform": "800V"
+      }
+    ],
+    "scores": {
+      "battery": {
+        "value": null,
+        "evidence": "电池安全实绩及推荐版本质保除外责任未齐；宣传测试不能代替实际风险评价。"
+      },
+      "afterSales": {
+        "value": null,
+        "evidence": "广州就近授权售后网点、三电维修能力与预约时效待核实，暂不按品牌规模评分。"
+      },
+      "comfort": {
+        "value": null,
+        "evidence": "未完成家庭四人同乘试驾；座椅、隔音、空调和后排晕车感待验证。"
+      },
+      "space": {
+        "value": null,
+        "evidence": "尺寸仅供初筛，儿童座椅、四人乘坐与假期行李实装待验证。"
+      },
+      "safety": {
+        "value": null,
+        "evidence": "推荐版本安全配置及同年款独立安全结果待完整核验；辅助驾驶不等于自动驾驶。"
+      },
+      "charging": {
+        "value": null,
+        "evidence": "CLTC不是实际高速续航；广州公共桩兼容性、充电曲线与假期排队待验证。"
+      },
+      "price": {
+        "value": null,
+        "evidence": "没有广州有效落地报价；保险、税费和上牌未知，不用指导价代替落地评分。"
+      },
+      "driving": {
+        "value": null,
+        "evidence": "未完成广州道路及车位试驾，转向、制动、滤震与停车便利性待验证。"
+      },
+      "smart": {
+        "value": null,
+        "evidence": "推荐版本软件功能开通状态及座舱、辅助驾驶实际表现待验证。"
+      }
+    },
+    "sources": [
+      {
+        "type": "官方",
+        "title": "零跑全新C10车型页（动态页面）",
+        "url": "https://cn.leapmotor.com/C10.html",
+        "checkedAt": "2026-09-20"
+      },
+      {
+        "type": "官方",
+        "title": "C10官网页面资源：纯电800V补能说明",
+        "url": "https://cn.leapmotor.com/js/3905.chunk.469c9292.js",
+        "checkedAt": "2026-09-20"
+      },
+      {
+        "type": "媒体",
+        "title": "汽车之家：2026年6月16日全新C10上市",
+        "url": "https://www.autohome.com.cn/news/202606/1315103.html",
+        "checkedAt": "2026-09-20"
+      }
+    ]
+  },
+  {
+    "id": "gac-toyota-bz3x",
+    "brand": "广汽丰田",
+    "name": "广汽丰田 铂智 3X",
+    "status": "已上市",
+    "recommendedVariantId": "bz3x-610-max",
+    "image": "assets/car-placeholder.svg",
+    "summary": "610 Max兼顾续航和预算；官网有详细权益条款，需确认购车月份及本人适用条件。",
+    "strengths": [
+      "官网：610 Max建议零售价15.98万元",
+      "官方明确基础三电保修及有条件终身质保、衰减责任"
+    ],
+    "risks": [
+      "14.48万元限时权益截至2026-08-31，已过期不计入报价",
+      "终身权益需首任非营运、签约及履行保养等义务",
+      "610 Max不能套用520激光雷达版全部功能"
+    ],
+    "specs": {
+      "lengthMm": 4600,
+      "widthMm": 1850,
+      "heightMm": 1645,
+      "wheelbaseMm": 2765,
+      "trunkLiters": null,
+      "batterySupplier": null
+    },
+    "variants": [
+      {
+        "id": "bz3x-610-max",
+        "name": "2026款 610 Max",
+        "guidePriceWan": 15.98,
+        "cltcKm": 610,
+        "batteryKwh": 67.92,
+        "chargingPlatform": "电压待核验；30%–80%快充24分钟（媒体参配）"
+      }
+    ],
+    "scores": {
+      "battery": {
+        "value": null,
+        "evidence": "官方三电基础保修8年/15万公里，首任非营运符合条款可享终身权益；安全实绩及当月适用权益未齐，暂不评分。"
+      },
+      "afterSales": {
+        "value": null,
+        "evidence": "广州就近授权售后网点、三电维修能力与预约时效待核实，暂不按品牌规模评分。"
+      },
+      "comfort": {
+        "value": null,
+        "evidence": "未完成家庭四人同乘试驾；座椅、隔音、空调和后排晕车感待验证。"
+      },
+      "space": {
+        "value": null,
+        "evidence": "尺寸仅供初筛，儿童座椅、四人乘坐与假期行李实装待验证。"
+      },
+      "safety": {
+        "value": null,
+        "evidence": "推荐版本安全配置及同年款独立安全结果待完整核验；辅助驾驶不等于自动驾驶。"
+      },
+      "charging": {
+        "value": null,
+        "evidence": "CLTC不是实际高速续航；广州公共桩兼容性、充电曲线与假期排队待验证。"
+      },
+      "price": {
+        "value": null,
+        "evidence": "没有广州有效落地报价；保险、税费和上牌未知，不用指导价代替落地评分。"
+      },
+      "driving": {
+        "value": null,
+        "evidence": "未完成广州道路及车位试驾，转向、制动、滤震与停车便利性待验证。"
+      },
+      "smart": {
+        "value": null,
+        "evidence": "推荐版本软件功能开通状态及座舱、辅助驾驶实际表现待验证。"
+      }
+    },
+    "sources": [
+      {
+        "type": "官方",
+        "title": "铂智3X价格及权益期限",
+        "url": "https://campaign.gac-toyota.com.cn/bozhi3X/",
+        "checkedAt": "2026-09-20"
+      },
+      {
+        "type": "官方",
+        "title": "铂智3X客户用车及服务权益条款",
+        "url": "https://www.gac-toyota.com.cn/vehicles/bozhi3X/note",
+        "checkedAt": "2026-09-20"
+      },
+      {
+        "type": "官方",
+        "title": "铂智3X官方配置入口",
+        "url": "https://www.gac-toyota.com.cn/minisite/Campaigns/bozhi3xTable",
+        "checkedAt": "2026-09-20"
+      },
+      {
+        "type": "媒体",
+        "title": "太平洋汽车：2026款铂智3X分版本配置",
+        "url": "https://price.pcauto.com.cn/s50817/config.html",
+        "checkedAt": "2026-09-20"
+      }
+    ]
+  }
+]
