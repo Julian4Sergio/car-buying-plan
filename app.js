@@ -17,7 +17,8 @@ function money(value) {
 function calculateEstimatedTotal(quote) {
   const fields = ['guidePriceWan', 'discountWan', 'insuranceWan', 'purchaseTaxWan', 'registrationWan', 'optionsWan'];
   if (fields.some((field) => quote[field] === null || quote[field] === undefined)) return null;
-  return quote.guidePriceWan - quote.discountWan + quote.insuranceWan + quote.purchaseTaxWan + quote.registrationWan + quote.optionsWan;
+  const total = quote.guidePriceWan - quote.discountWan + quote.insuranceWan + quote.purchaseTaxWan + quote.registrationWan + quote.optionsWan;
+  return Math.round(total * 1_000_000) / 1_000_000;
 }
 
 function budgetStatus(totalWan, budget) {
