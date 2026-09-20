@@ -29,6 +29,14 @@ h1, h2 { line-height: 1.25; }
 .tag--stretch { background: var(--stretch); }
 .tag--reference { background: var(--reference); }
 .muted { color: var(--muted); }
+.compact-list { margin: .5rem 0 0; padding-left: 1.2rem; }
+.compact-list li + li { margin-top: .35rem; }
+.ranking-note { grid-column: 1 / -1; margin: 0; }
+.overview-recommendation h2, .vehicle-card h3 { margin: .6rem 0 0; }
+.score-meta, .price-meta, .source-meta { font-size: .9rem; }
+.score-meta strong { font-size: 1.1rem; }
+.vehicle-card { overflow: hidden; }
+.vehicle-image { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: .5rem; }
 .table-wrap { overflow-x: auto; }
 table { width: 100%; min-width: 36rem; border-collapse: collapse; background: var(--surface); }
 th, td { padding: .75rem; border: 1px solid var(--line); text-align: left; }
