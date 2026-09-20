@@ -128,10 +128,8 @@ function comparisonTable(vehicles) {
     ['charging', '补能'], ['price', '价格'], ['driving', '驾驶'], ['smart', '智能'],
   ];
   const dimensions = (vehicle) => {
-    const values = ['lengthMm', 'widthMm', 'heightMm']
-      .map((field) => vehicle.specs?.[field])
-      .filter((value) => value !== null && value !== undefined && value !== '');
-    return present(values.length ? `${values.join(' × ')} mm` : null);
+    const values = ['lengthMm', 'widthMm', 'heightMm'].map((field) => present(vehicle.specs?.[field]));
+    return `${values.join(' × ')} mm`;
   };
   const rows = [
     ['推荐版本', (vehicle) => recommendedVariant(vehicle).name],
@@ -161,7 +159,7 @@ function renderComparison(vehicles, ranking) {
     section.append(content);
   }
   let selectedIds = ranking.slice(0, 3).map(({ vehicle }) => vehicle.id);
-  const renderContent = () => {
+  const draw = (focusedVehicleId) => {
     const selectedVehicles = vehicles.filter((vehicle) => selectedIds.includes(vehicle.id));
     content.innerHTML = `<fieldset class="compare-controls"><legend>选择对比车型（最多 3 款）</legend>${vehicles.map((vehicle) => {
       const checked = selectedIds.includes(vehicle.id);
@@ -179,11 +177,14 @@ function renderComparison(vehicles, ranking) {
         } else {
           selectedIds = selectedIds.filter((id) => id !== input.value);
         }
-        renderContent();
+        draw(input.value);
       });
     });
+    if (focusedVehicleId) {
+      [...content.querySelectorAll('input[type="checkbox"]')].find((input) => input.value === focusedVehicleId)?.focus();
+    }
   };
-  renderContent();
+  draw();
 }
 function renderCosts() {}
 function renderTestDrives() {}
